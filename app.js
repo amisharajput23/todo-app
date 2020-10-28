@@ -8,7 +8,7 @@ const filterOption = document.querySelector('.filter-todo');
 //Event Listeners
 todoButton.addEventListener('click', addTodo);
 todoList.addEventListener('click', deleteCheck);
-filterOption.addEventListener('click'.filterTodo);
+filterOption.addEventListener('click',filterTodo);
 
 
 //Functions
@@ -67,20 +67,25 @@ function filterTodo(e){
    todos.forEach(function(todo){
      switch(e.target.value){
        case "all" :
-         todo.style.display = 'flex';
+         todo?.style?.display = 'flex';
+     
          break;
          case "completed":
-           if(todo.classList.contains('completed')){
-             todo.style.display = 'flex';
-           }else{
-             todo.style.display = 'none';
+           if(todo.classList.contains("completed")){
+             todo?.style?.display = 'flex';
+        
            }
+           else{
+             todo?.style?.display = 'none';
+           }
+           break;
            case "uncompleted" :
              if(!todo.classList.contains('completed')){
-               todo.style.display = "flex";
+               todo?.style?.display = "flex";
              }else{
-              todo.style.display = 'none';
+              todo?.style?.display = 'none';
              }
+          
      }
    });
 }

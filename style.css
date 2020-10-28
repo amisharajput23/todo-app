@@ -100,14 +100,14 @@ form button:hover{
 select{
     -webkit-appearance: none;
     -moz-appearance: none;
-    appearance: none
+    appearance: none;
     outline : none;
     border : none;
 }
 
 .select{
     margin: 1rem;
-    position: relative
+    position: relative;
     overflow : hidden;
 }
 
@@ -118,7 +118,7 @@ select {
     padding: 1rem;
 
 }
-
+ /*arrow */
 .select ::after {
     content: "\25BC";
     position: absolute;
@@ -126,6 +126,7 @@ select {
     top: 0;
     right: 0;
     padding: 1rem;
+    cursor: pointer;
     pointer-events: none;
     transition: all 0.3s ease;
 }
